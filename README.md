@@ -11,7 +11,9 @@ Here are the minimal commands needed to run FStitch from start to finish; for gr
 ```
 $ FStitch train -i </path/to/BedGraphFile> -j </path/to/TrainingFile>  -o </path/to/Parameters.out>
 
-$ FStitch segment -i </path/to/forward/BedGraphFile> -j </path/to/reverse/BedGraphFile> -k </path/to/Parameters.out> -o </path/to/Classifications.bed>
+$ FStitch segment -i </path/to/forward/BedGraphFile> -j </path/to/reverse/BedGraphFile> -k </path/to/Parameters.out> -o </path/to/Classifications.bed> -s +
+
+$ FStitch segment -i </path/to/forward/BedGraphFile> -j </path/to/reverse/BedGraphFile> -k </path/to/Parameters.out> -o </path/to/Classifications.bed> -s -
 ```
 
 ##System Requirements
@@ -96,6 +98,7 @@ FStitch segment follows from FStitch train and takes as input the TrainingParame
 | -k 	| \</path/to/anyName.out> |Training Parameter Out File from FStitch train call
 | -o	| \</path/to/anyName.bed> |A bed file that gives the regions considered active nascent transcription (or ChIP-seq peak) and noise
 | -np 	| number |number of processors, default 8
+| -s   | strand (should be + or -)
 
 Putting this together
 ```
